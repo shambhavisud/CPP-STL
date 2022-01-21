@@ -39,22 +39,23 @@ struct Rectangle
     // ...
 };
 
-// struct node
-// {
-//     string str;
-//     int num;
-//     double dub;
-//     char c;
+// struct is a user defined data type;
+struct node
+{
+    string str;
+    int num;
+    double dub;
+    char c;
 
-//     // constructor
-//     node(str_, num_, dub_, c_)
-//     {
-//         str = str_;
-//         num = num_;
-//         dub = dub_;
-//         c = c_;
-//     }
-// };
+    // constructor
+    node(string str_, int num_, double dub_, char c_)
+    {
+        str = str_;
+        num = num_;
+        dub = dub_;
+        c = c_;
+    }
+};
 
 int main()
 {
@@ -70,5 +71,22 @@ int main()
     // shambhavi.num = 9;
     // shambhavi.dub = 9.83;
 
-    // node shambhavi = new node("shambhavii", 79, 91.0, "");
+    node shambhaviii = new node("shambhavii", 79, 91.0, "");
+
+    // Arrays
+
+    // containers
+    array<int, 100> arr; // an array of size 100, if declared inside int main it can have anything incase not initialised
+    // at the same time if its not been initialised and it's outside int main it will be initialised with 0 by default
+    // hence if defined globally it will have 0s while if defined inside int main() it can contain all possible garbage values
+
+    array<int, 5> arr2 = {1, 2, 3}; // the other 2 values would be 0,0
+    // hence if we declare and still dont declare all values, those not initialized take value of 0;
+
+    array<int, 6> arr3 = {1}; // does NOT mean that it's been initialised with 1s , rather only value at index 0 is 1 and resta re 0s
+
+    int arr[100] = {0}; // means youve initialised the 0th index however the rest since you have not initialised hence the rest becomes 0
+
+    array<int, 5> arr_rand;
+    arr_rand.fill(5);
 }
