@@ -88,5 +88,5 @@ int main()
     int arr[100] = {0}; // means youve initialised the 0th index however the rest since you have not initialised hence the rest becomes 0
 
     array<int, 5> arr_rand;
-    arr_rand.fill(5);
+    arr_rand.fill(5); // fills value at all indexes til 0 to 4 with 5.
 }
