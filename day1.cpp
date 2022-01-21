@@ -89,4 +89,12 @@ int main()
 
     array<int, 5> arr_rand;
     arr_rand.fill(5); // fills value at all indexes til 0 to 4 with 5.
+
+    arr_rand.at(index);
+
+    // another way of printing the whole array
+    for (int i; i < 5; i++)
+    {
+        cout << arr_rand.at(i) << " ";
+    }
 }
