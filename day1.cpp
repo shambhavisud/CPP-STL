@@ -90,11 +90,52 @@ int main()
     array<int, 5> arr_rand;
     arr_rand.fill(5); // fills value at all indexes til 0 to 4 with 5.
 
-    arr_rand.at(index);
+    /*arr_rand.at(index);*/
 
     // another way of printing the whole array
     for (int i; i < 5; i++)
     {
         cout << arr_rand.at(i) << " ";
     }
+
+    // ITERATORS
+    // begin(),end(),rbegin(),rend();
+    // when declaring an array, the arressing is allotted in a contegious manner
+    // end() points to the address right after the last element
+    // rend(): right before the start of array, rend() is going to point there
+    // begin() points at the first element
+    // rbegin() points at the last element
+
+    array<int, 5> arr4 = {1, 3, 4, 5, 6};
+    for (auto it = arr4.begin(); it != arr4.end(); it++)
+    {
+        cout << *it << " ";
+    }
+
+    for (auto it = arr4.rbegin(); it != arr4.rend(); it++) // we wont write it--, we right ++ since its a reverse iterator only, it'll move backwards
+    {
+        cout << *it << " ";
+    }
+
+    for (auto it = arr4.end() - 1; it >= arr4.begin(); it--)
+    {
+        cout << *it << " ";
+    }
+
+    for (auto it : arr4)
+    {
+        cout << it << " ";
+    }
+
+    string s = "bcbdjeodfrzxd";
+    for (auto c : s)
+    {
+        cout << c << " "; // going to characted not the address pointing
+    }
+
+    // printing the first element
+    arr5.front();
+
+    // printing the array back
+    arr5.back(); // arr5.at(arr5.size()-1)
 }
