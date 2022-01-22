@@ -134,8 +134,81 @@ int main()
     }
 
     // printing the first element
-    arr5.front();
+    arr4.front();
 
     // printing the array back
-    arr5.back(); // arr5.at(arr5.size()-1)
+    arr4.back(); // arr5.at(arr5.size()-1)
+
+    /// VECTOR
+    // with arrays we need to predefine their size and post predefining the size we cannot add elements mor ethan that size
+    //  the max size of array that we can declare in c++,
+    // within int main() arr max size can be 10^6 for int, double , char etc
+    // globally arr max size can be 10^7
+    // if arr is boolean , within int main max size can be 10^7
+    // globally declared boolean arr max size can be 10^8
+
+    // with vectors we dont need to tell them the size
+    vector<int> arr6;
+    cout << arr6.size() << " "; // prints 0
+    arr6.push_back(20);
+    // it can be increased dynamically
+    arr6.pop_back();
+
+    // segmentation fault means you cannot allocate memeory more than 10^6 in int main()
+
+    vector<int> vec(4, 10); //{10,10,10,10}
+    vec.clear();            /// erases all the elements of the vactor and vector will turn empty
+
+    // inserting all elements of vec to vec2
+    vector<int> vec2(vec.begin(), vec.end());
+    // another way of copying entire vec to vec2
+    vector<int> vec2(vec);
+
+    vector<int> shamb;
+    shamb.push_back(1); // shamb.emplace_back(1)///emplace_back takes lesser time than push_back
+    shamb.push_back(2);
+    shamb.push_back(3);
+    shamb.push_back(4);
+    shamb.push_back(5);
+
+    // want to copy only first to elements to another vector
+
+    vector<int> sham2(shamb.begin(), shamb.begin() + 2); //{1,2}
+
+    // lower bound, upper bound
+    // swap swap(vector1,vector2)
+
+    // defining 2d vector
+
+    vector<int> vec3;
+    vec3.push_back(50);
+    vec3.push_back(60);
+    vector<vector<int>> vec4;
+    vec4.push_back(vec);
+    vec4.push_back(vec2);
+    vec4.push_back(vec3);
+
+    // here it will be a vector itself
+    // first it will be vec, then vec2, then vec3
+    for (auto vecc : vec4)
+    {
+        for (auto num : vecc)
+        {
+            cout << num << " ";
+        }
+        cout << endl;
+    }
+
+    // define 10 x 20
+
+    vector<vector<int>> vec6(10, vector<int>(20, 0));
+
+    int arrayy[4]; /// means an array where each element is an int
+
+    vector<int> arra6[4]; // is an array of vectors
+    arra6[0].push_back(2);
+
+    // defining a vector of 10 x 20 x 30
+
+    vector<vector<vector<int>>> veccc(10, vector<vector<int>>(20, vector<int>(30)));
 }
