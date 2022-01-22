@@ -203,7 +203,7 @@ int main()
 
     vector<vector<int>> vec6(10, vector<int>(20, 0));
 
-    int arrayy[4]; /// means an array where each element is an int
+    int arrayy[4]; /// means an array where each element is an int// this is not dynamic
 
     vector<int> arra6[4]; // is an array of vectors
     arra6[0].push_back(2);
